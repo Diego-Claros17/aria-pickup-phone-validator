@@ -1,0 +1,15 @@
+query CartValidationsGenerateRunInput {
+  buyerJourney {
+    step
+  }
+  cart {
+    billingAddress {
+      phone
+    }
+    deliveryGroups {
+      selectedDeliveryOption {
+        deliveryMethodType
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "1c4cf22e775b35d08fb91510a5280aa6"
+name = "ARIA Pickup Phone Validator"
+application_url = "https://example.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true
+
+[webhooks]
+api_version = "2026-10"
+
+  #[[webhooks.subscriptions]]
+ # uri = "/webhooks/app/scopes_update"
+ # topics = [ "app/scopes_update" ]
+
+  #[[webhooks.subscriptions]]
+  #uri = "/webhooks/app/uninstalled"
+ # topics = [ "app/uninstalled" ]
+
+[access_scopes]
+scopes = ""
+
+[auth]
+redirect_urls = [ "https://example.com/api/auth" ]
+
+

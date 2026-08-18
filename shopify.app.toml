@@ -2,7 +2,7 @@
 
 client_id = "1c4cf22e775b35d08fb91510a5280aa6"
 name = "ARIA Pickup Phone Validator"
-application_url = "https://example.com"
+application_url = "https://aria-pickup-phone-validator.onrender.com"
 embedded = true
 
 [build]
@@ -12,18 +12,20 @@ include_config_on_deploy = true
 [webhooks]
 api_version = "2026-10"
 
-  #[[webhooks.subscriptions]]
- # uri = "/webhooks/app/scopes_update"
- # topics = [ "app/scopes_update" ]
+  [[webhooks.subscriptions]]
+  uri = "/webhooks/app/scopes_update"
+  topics = [ "app/scopes_update" ]
 
-  #[[webhooks.subscriptions]]
-  #uri = "/webhooks/app/uninstalled"
- # topics = [ "app/uninstalled" ]
+  [[webhooks.subscriptions]]
+  uri = "/webhooks/app/uninstalled"
+  topics = [ "app/uninstalled" ]
 
 [access_scopes]
 scopes = ""
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://aria-pickup-phone-validator.onrender.com/auth/callback"
+]
 
 
